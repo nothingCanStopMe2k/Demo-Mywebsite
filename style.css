@@ -14,27 +14,31 @@ i {
 
 body {
     margin: 0px 0px;
+    background-color: rgb(114, 103, 103);
 }
 #background1{
 
-    background-size: cover;
+    
     margin-top: 0px;
     opacity: 90%;
-    height: 550px;
-    background-position:center;
+    height: 614px;
+    background-image: url("/image/Paine.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   
-    animation-name: covertBackground;
+    /* animation-name: covertBackground;
     animation-duration: 25s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out
 }
 @keyframes covertBackground {
-    0%, 100% {background-image: url("https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");}
+    0%, 100% {background-image: url("/image/Paine.png");}
     25% {background-image: url("https://images.pexels.com/photos/3696395/pexels-photo-3696395.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");}
     50% {background-image: url("https://images.pexels.com/photos/3101522/pexels-photo-3101522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")}
     75% {background-image: url("https://images.pexels.com/photos/1916821/pexels-photo-1916821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")}
 
-}
+} */}
 .menu {
     font-family: 'Russo One', sans-serif;
     color: #BBB;
@@ -49,4 +53,50 @@ body {
     text-align: right;
     background-color : rgba(44, 42, 42, 0.5);
  
+}
+#button_sign_up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 129vh;
+}
+
+#button_sign_up a {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    padding: 10px;
+    overflow: hidden;
+
+    padding: 12px 36px;
+    margin: 10px 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+
+span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+
+}
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 }

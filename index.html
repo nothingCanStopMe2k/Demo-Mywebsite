@@ -11,22 +11,40 @@
 </head>
 <body>
     <div id = "background1">
+
         <br>
         <div id = "container">
             <div id = "title">
                 <a class = "menu" href="#"><i class="fas fa-home"></i>Home</a>
                 <a class = "menu" href="#"><i class="fas fa-question-circle"></i>About</a>
-                <!-- <select name="list-courses" class="menu">
-                    <option>Piano</option>
-                    <option>Guitar</option>
-                    <option>Ukulele</option>
-                    <option>Harmonica</option>
-                </select> -->
                 <a class = "menu" href="#"><i class="fab fa-leanpub"></i>Courses</a> 
                 <a class = "menu" href="#"><i class="fas fa-phone-square"></i>Hotline</a>
             </div>
         </div>
-        <h1>Music is invigorating...isn't it?</h1>
+        <div id = "button_sign_up">
+            <a id = 'hi' href="#">Sign up</a>
+            <script>
+                const buttons = document.querySelectorAll('a#hi');
+                console.log(buttons);
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', function(e){
+
+                        let x = e.clientX - e.target.offsetLeft;
+                        let y = e.clientY - e.target.offsetTop;
+
+                        let ripples = document.createElement('span');
+                        ripples.style.left = x + 'px';
+                        ripples.style.top = y + 'px';
+                        this.appendChild(ripples);
+
+                        setTimeout(() => {
+                            ripples.remove();
+                        }, 1000);
+                    })
+                })
+            </script>
+         </div>
+        
     </div>
     <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus consequuntur rerum voluptates vitae magni error inventore veniam natus officia, atque, modi quos fuga. Perferendis maxime id illo reprehenderit cupiditate ea!</h1>
 </body>
